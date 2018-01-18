@@ -12,7 +12,11 @@ class GetAnagramsForWords
   private
 
   def anagrams_for(word)
-    groups[::WordEntry.canonicize(word)].map(&:word) - [word]
+    group_for(word).map(&:word) - [word]
+  end
+
+  def group_for(word)
+    groups[::WordEntry.canonicize(word)] || []
   end
 
   def groups
