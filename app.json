@@ -1,0 +1,10 @@
+{
+  "name": "Anagram finder",
+  "description": "Anagram finder with a built-in dictionary",
+  "repository": "https://github.com/bagilevi/anagram_finder",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
+}
