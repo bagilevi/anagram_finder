@@ -1,5 +1,7 @@
 class WordEntry < ApplicationRecord
-  scope :anagrams_for, ->(words) { where(canonical: words.map(&method(:canonicize))) }
+  # Entries that are an anagram of or the same as any of the words in the argument.
+  # E.g: ab, cd => ab, ba, cd, da
+  scope :anagrams_for_inclusive, ->(words) { where(canonical: words.map(&method(:canonicize))) }
 
   def word=(new_value)
     super

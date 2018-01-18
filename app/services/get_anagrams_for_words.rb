@@ -16,6 +16,8 @@ class GetAnagramsForWords
   end
 
   def groups
-    @groups ||= ::WordEntry.anagrams_for(@words).group_by(&:canonical)
+    @groups ||=
+      ::WordEntry.anagrams_for_inclusive(@words)
+        .group_by(&:canonical)
   end
 end

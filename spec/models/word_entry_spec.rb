@@ -12,7 +12,7 @@ RSpec.describe WordEntry, type: :model do
     create(:word_entry, word: 'peats');
     create(:word_entry, word: 'tapes');
 
-    records = described_class.anagrams_for(%w(pictures paste))
+    records = described_class.anagrams_for_inclusive(%w(pictures paste))
     anagrams = records.map(&:word)
     expect(anagrams).to contain_exactly *%w(pictures piecrust paste peats tapes)
   end
