@@ -1,8 +1,8 @@
 development:
-  url: <%= ENV.fetch('DEV_DATABASE_URL') %>
+  url: <%= ENV['DEV_DATABASE_URL'] %>
 
 test:
-  url: <%= ENV.fetch('TEST_DATABASE_URL') %>
+  url: <%= ENV['TEST_DATABASE_URL'] %>
 
 production:
-  url: <%= ENV.fetch('DATABASE_URL') %>
+  url: <%= ENV['DATABASE_URL'] %>
