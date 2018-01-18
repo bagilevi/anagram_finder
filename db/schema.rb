@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180118132709) do
+ActiveRecord::Schema.define(version: 20180118150556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180118132709) do
     t.string "word",      null: false
     t.string "canonical", null: false
     t.index ["canonical"], name: "index_word_entries_on_canonical", using: :btree
+    t.index ["word"], name: "index_word_entries_on_word", unique: true, using: :btree
   end
 
 end
