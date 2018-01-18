@@ -23,6 +23,8 @@ gem 'puma', '~> 3.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+gem 'bulk_insert'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem "factory_bot_rails", "~> 4.0"

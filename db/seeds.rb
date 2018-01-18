@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+File.open(Rails.root.join('db', 'wordlist.txt')) do |f|
+  ::ImportWords.new(f.each_line).call
+end

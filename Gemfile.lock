@@ -40,6 +40,8 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     builder (3.2.3)
+    bulk_insert (1.6.0)
+      activerecord (>= 4.1.0)
     byebug (9.1.0)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
@@ -143,6 +145,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bulk_insert
   byebug
   factory_bot_rails (~> 4.0)
   listen (~> 3.0.5)
